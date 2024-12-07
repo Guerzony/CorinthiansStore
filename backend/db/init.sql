@@ -20,4 +20,8 @@ CREATE TABLE "vendas" (
 
 INSERT INTO "produtos" ("nome", "marca", "cor", "quantidade", "preco") VALUES ('Camisa', 'Adidas', 'marron', 5, 500.00);
 INSERT INTO "produtos" ("nome", "marca", "cor", "quantidade", "preco") VALUES ('Tenis', 'nike', 'branco e preto',10, 300.00);
+<<<<<<< HEAD
 INSERT INTO "produtos" ("nome", "marca", "cor", "quantidade", "preco") VALUES ('Relogio', 'nike', 'Azul' ,15, 10000.00);
+=======
+INSERT INTO "produtos" ("nome", "marca", "cor", "quantidade", "preco") VALUES ('Relogio', 'nike', 'Azul' ,15, 10000.00);
+>>>>>>> 92deb9222bcf9ece0ca778ba58dc94b5f8be1752
