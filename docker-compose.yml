@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: produtos
+    networks:
+      - app-network
+    
+  frontend:
+    build: ./frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - API_BASE_URL=http://backend:8000  # Define a variável de ambiente para o frontend
+    networks:
+      - app-network
+
+networks:
+  app-network:
